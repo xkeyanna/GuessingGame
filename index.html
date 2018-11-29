@@ -18,11 +18,12 @@
             {
                 answerArray[i] = "_";
             }
-
+            //join is creating array string, often used with commas to list arrays out side by side
             s = answerArray.join(" ");
             document.getElementById("answer").innerHTML = s;
         }
-    
+
+
     document.onkeyup = function(Event) {
         if (event.key === "Enter") {
             Letter();
@@ -59,7 +60,7 @@
         <h1>Guess a letter</h1>
         <h2>Party Theme!</h2>
         <h3>What can you bring to a party?</h3>
-        <input id="letter" type="text">
+        <input id="letter" type="text" maxlength="1">
         <input type="button" value="letter" onClick="Letter()"/>
         <p id="answer"></p>
         <p id="counter"></p>
